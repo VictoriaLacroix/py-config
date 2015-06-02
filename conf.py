@@ -11,6 +11,15 @@ class ConfigFile():
     Adapted from a helper method from Python Wiki.
     This class will hold a config file, and attempt to
     automatically convert values to ints or booleans.
+
+    With example.ini as a test file:
+    >>> c = ConfigFile('tests/example.ini')
+    >>> c.get('Section One', 'Key')
+    'Value'
+    >>> c.get('Section One', 'Luggage_Combination')
+    12345
+    >>> c.getsection('Section Two')
+    {'LOCATION': 'Hyrule', 'KEY': 'Value'}
     """
     def __init__(self, path):
         self.conf = ConfigParser()
@@ -54,3 +63,7 @@ class ConfigFile():
                 return key
         except:
             return None
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
