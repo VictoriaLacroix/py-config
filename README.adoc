@@ -1,0 +1,8 @@
+= Py-Config
+Victoria Lacroix
+
+This python module will help a lot with using pyhton's built-in config parser library. The problem with the default one is that you needed to have known what type of data was coming in for configs and pull it out that way (I.E getint(), getbool()), which is inconvenient.
+
+== License
+
+This module is licensed under the GPL. So go nuts.
